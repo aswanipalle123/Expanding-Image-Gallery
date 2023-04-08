@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding Gallery</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container{
+            width:100%;
+            height:100vh;
+            background-color: #f2e9ff;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /*it goes on top*/
+        .img-box{
+            /*width:300px*/
+            width:100px;
+            height:600px;
+            margin:10px;
+            border-radius:50px;
+            background: url(https://tse4.mm.bing.net/th?id=OIP.yTU4CZ3Jovk2d6Vzd-88ZQHaEK&pid=Api&P=0);
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position:center;
+            position:relative;
+            transition:width 0.5s;
+        }
+       .img-box:nth-child(2){
+            background: url(https://tse2.mm.bing.net/th?id=OIP.VpWo7JXSgqN-YFdxgrBPpwHaEo&pid=Api&P=0);
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position:center;
+       }
+       .img-box:nth-child(3){
+            background: url(https://tse4.mm.bing.net/th?id=OIP.0ivs6TOTxbo0ArFFwaM41QHaEo&pid=Api&P=0);
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position:center;
+       }
+       .img-box:nth-child(4){
+            background: url(https://tse2.mm.bing.net/th?id=OIP.C69s0yEXXyH5JrVvd_zQqwHaF7&pid=Api&P=0);
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position:center;
+       }
+       /*spacing btewween top & bottom*/
+       .img-box h3{
+        color:white;
+        position: absolute;
+        left:8%;
+        bottom:1%;
+        opacity:0;
+        transition: bottom 0.5s, opacity 0.5s;
+        }
+        .img-box:hover{
+            width:500px;
+            cursor:pointer;
+        }
+        .img-box:hover h3{
+            opacity:1;
+            bottom:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color:red;opacity:0.5;text-align:left;font-style:italic;">Expand Gallery Images</h1>
+        <div class="gallery">
+           <div class="img-box"><h3>sush</h3></div>
+           <div class="img-box"><h3>sam</h3></div>
+           <div class="img-box"><h3>pinky</h3></div>
+           <div class="img-box"><h3>suhail</h3></div>
+        </div>
+    </div>
+</body>
+</html>
